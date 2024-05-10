@@ -1,0 +1,6 @@
+When testing for the correct directions of up and down I ran into a problem.
+By setting each pixel colour to the z co-ordinate of the vector (dot product with the unit z vector)
+the lighter parts of the screen looked as though they were below the camera.
+
+Pressing the up arrow to move up also made it look as though the camera was turning down.
+The issue was that winforms and bitmaps treat y = 0 as the top of the image wereas i treated it as the bottom

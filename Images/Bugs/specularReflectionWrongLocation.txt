@@ -1,0 +1,9 @@
+Specular reflection was always headed back towards the camera:
+(2023.10.10.20.33_RayTracer_635, 2023.10.10.19.51_RayTracer_564)
+Even though the light source is above the camera, the light appears
+to come from behind the camera. The specular reflection patch should be nearer the
+top of the sphere on the green ball in each case.
+
+FIXED
+Problem was BRDF getting inputted the wrong rays, it wanted the input and output rays
+in the physical sense, not the order in which we calculate them in the program.

@@ -1,0 +1,13 @@
+#	Suffix Quat is a quaternion
+
+FUNCTION getCameraRotation(input_rotations)
+#	Half is how quaternion multiplication works
+	xyAngle <= input_rotations[0]
+	yzAngle <= input_rotations[1]
+	xzAngle <= input_rotations[2]
+	
+	xyQuat <= quaternion.fromAngleAndAxis(xyAngle, (0, 0, 1))
+	yzQuat <= quaternion.fromAngleAndAxis(yzAngle, (1, 0, 0))
+	xzQuat <= quaternion.fromAngleAndAxis(xzAngle, (0, 1, 0))
+	
+	camQuat <= xzQuat * yzQuat * xzQuat

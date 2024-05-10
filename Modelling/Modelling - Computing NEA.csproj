@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Modelling___Computing_NEA</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="anti-AliasingShownInPerspective.jpg" />
+    <None Remove="BlackCircle.jpg" />
+    <None Remove="Box, slanted.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="anti-AliasingShownInPerspective.jpg" />
+    <Resource Include="Box, slanted.jpg" />
+    <Resource Include="BlackCircle.jpg" />
+  </ItemGroup>
+
+</Project>

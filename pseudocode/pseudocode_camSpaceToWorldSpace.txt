@@ -1,0 +1,8 @@
+FUNCTION camSpaceToWorldSpace(point_relCam)
+	point_relWorld = camera.position + rotatePoint(point_relCam, camera.rotQuat)
+	return point_relWorld
+	
+	UNCHANGED 
+
+	
+	

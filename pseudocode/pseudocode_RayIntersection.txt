@@ -1,0 +1,51 @@
+#	Hardcoded
+
+tolerance.MaxIterations #	Max times we can jump forward for a given ray
+tolerance.MaxDistance   #	Greater distances than this will stop intersection checking
+tolerance.MinDistance   #	We treat reaching this distance as 'intersecting' that object
+
+FUNCTION determineIntersections(rayOrigin, rayDirection, previousShape)
+    #	previousShape stops us colliding with what we just hit
+    rayDirection <= normalise(rayDirection)	#	We want to normalise rayDirection
+
+    currPos <= rayOrigin
+
+    searching <= true
+    iterationCount <= 0
+    exitCode <= null
+    closestObject <= null
+
+    WHILE searching is true
+        #	Find closest surface
+        lowestDistance = tolerance.MaxDistance
+        FOR object IN all shapes and lights				
+            IF object is not previousShape
+                newDistance = object.SDF(currPos)
+                #	SDF = Signed Distance Function
+                
+                IF newDistance < lowestDistance
+                    lowestDistance = newDistance
+                    closestObject = object
+                END IF
+            END IF
+        END FOR
+        #	Iteration count used to check against max iteration count
+        iterationCount <= iterationCount + 1
+        
+        #	Use closest surface to find new position
+        currPos <= currPos + rayDirection * lowestDistance
+        
+        #	Tolerance check:
+        #   Have we travelled over the max distance?
+        #   Have we gone through too many iterations?
+        IF iterationCount > tolerance.MaxIterations OR lowestDistance = tolerance.MaxDistance
+            searching <= false
+            exitCode <= NO_INTERSECTION
+        ELSE IF lowestDistance <= tolerance.MinDistance
+            searching <= false
+            exitCode <= INTERSECTION
+        END IF
+    END WHILE
+
+
+    return(exitCode, CurrPos, closestObject)

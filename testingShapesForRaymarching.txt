@@ -1,0 +1,383 @@
+#region Testing shapes:
+//  First sphere
+//Vec3 pos1 = new Vec3(100, -50, 0);
+//Vec3 k_s1 = new Vec3(0.1, 0.8, 0.9);
+//Vec3 k_d1 = new Vec3(0.9, 0.2, 0.1);
+//double alpha1 = 2;
+//double radius1 = 15;
+//Vec3 lightStrength1 = 10 * new Vec3(0.1, .1, 1);
+//lights.Add(new Sphere(pos1, k_s1, k_d1, alpha1, radius1, lightStrength1));
+
+
+
+//  Fourth sphere
+//Vec3 pos4 = new Vec3(50, 0, 30);
+//Vec3 k_s4 = new Vec3(0, 0, 0);
+//Vec3 k_d4 = new Vec3(1,1, 1);
+//double alpha4 = 14;
+//double radius4 = 7.5;
+//Vec3 lightStrength4 = 75*new Vec3(1, 1, 1);
+//lights.Add(new Sphere(pos4, k_s4, k_d4, alpha4, radius4, lightStrength4));
+
+//  Fifth sphere 105,76,179
+//Vec3 pos5 = new Vec3(25, -25, 20);
+//Vec3 k_s5 = 1 * new Vec3(0.3, 0.2, 0.9);
+//Vec3 k_d5 = 1 * new Vec3(0.4, 0.3, 0.8);
+//double alpha5 = 3;
+//double radius5 = 10;
+//shapes.Add(new Sphere(pos5, k_s5, k_d5, alpha5, radius5));
+
+
+
+//  Tenth Sphere
+//shapes.Add(new Sphere(
+//    position: new Vec3(60, 40, 140)
+//    , specularComponent: new Vec3(.1, .1, .9)
+//    , diffuseComponent: new Vec3(0.9, .9, 0.1)
+//    , alpha: 6
+//    , radius: 50
+//    ));
+
+
+//  Combo sphere 1
+//Shape comboSphere1 = new Sphere(
+//    position: new Vec3(45, -25, 25)
+//    , specularComponent: new Vec3(.9, 0.9, 0)
+//    , diffuseComponent: new Vec3(.1, .1, 1)
+//    , alpha: 6
+//    , radius: 32
+//    );
+
+////  Combo Sphere 2
+//Shape comboSphere2 = new Sphere(
+//    position: new Vec3(45, -35, 60)
+//    , specularComponent: new Vec3(0, .9, .9)
+//    , diffuseComponent: new Vec3(1, .1, 0.1)
+//    , alpha: 6
+//    , radius: 20
+//    );
+//  First Combo sphere
+//shapes.Add(new Combination(
+//    specularComponent: new Vec3(.9, 0, .9),
+//    diffuseComponent: new Vec3(.1, 1, .1),
+//    alpha: 6,
+//    shape1: comboSphere1,
+//    shape2: comboSphere2,
+//    sdfWeighting: 0.7,
+//    type: comboType.Union
+
+
+
+//    ));
+
+////  First Point light source
+//lightPoints.Add(new PointLight(
+//    position: new Vec3(-20, -60, 60),
+//    lightColour: new Vec3(1, 1, 1),
+//    lightBrightness: 5
+
+//    ));
+
+////  Second Point light source
+//lightPoints.Add(new PointLight(
+//    position: new Vec3(130, 80, 150),
+//    lightColour: new Vec3(1, 1, 1),
+//    lightBrightness: 2
+
+//    ));
+
+//  Infinite sphere
+//shapes.Add(new InfiniteSphere(
+//    position: new Vec3(60, 40, 140)
+//    , specularComponent: new Vec3(.7, .1, .9)
+//    , diffuseComponent: new Vec3(0.3, 0.9, 0.1)
+//    , alpha: 6
+//    , radius: 25
+//    , repetitionVector: new Vec3(100, 100, 100)
+//    ));
+
+//shapes.Add(new InfiniteSphere(
+//    position: new Vec3(50, 50, 50)
+//    , specularComponent: new Vec3(.7, .9, .1)
+//    , diffuseComponent: new Vec3(0.3, 0.1, 0.9)
+//    , alpha: 6
+//    , radius: 5
+//    , repetitionVector: new Vec3(100, 100, 200)
+//    ));
+
+//  First line
+//lights.Add(new Line(
+//    specularComponent: new Vec3(0.9, .9, .3),
+//    diffuseComponent: new Vec3(0.1, 0.1, 0.7),
+//    alpha: 6,
+//    pointA: new Vec3(50,-90,60),
+//    pointB: new Vec3(50,60,70),
+//    radius: 30,
+//    lightStrength: 20 * new Vec3(.5, 0.2, 0.8),
+//    haltB: false
+
+//    ));
+
+//  Bottom plane
+//shapes.Add(new Plane(
+//    pointOnPlane: new Vec3(0, 0, 0),
+//    specularComponent: new Vec3(0.3, .3, .9),
+//    diffuseComponent: new Vec3(.7, .7, .1),
+//    alpha: 6,
+//    normal: new Vec3(0, 0, 1)
+//    ));
+
+//  Rightside plane
+
+//shapes.Add(new Plane(
+//    pointOnPlane: new Vec3(0, -60, 0),
+//    specularComponent: new Vec3(0.7, .3, .9),
+//    diffuseComponent: new Vec3(.3, .7, .1),
+//    alpha: 6,
+//    normal: new Vec3(0, 1, 0)
+//    ));
+
+//  Back plane
+
+//shapes.Add(new Plane(
+//    pointOnPlane: new Vec3(200, 0, 0),
+//    specularComponent: new Vec3(0.5, .9, .5),
+//    diffuseComponent: new Vec3(.5, .1, .5),
+//    alpha: 6,
+//    normal: new Vec3(-1, 0, 0)
+//    ));
+
+//  Box One
+//shapes.Add(new Cuboid(
+//    position: new Vec3(-60, 0, 70),
+//    cornerPosition: new Vec3(10, 10, 20),
+//    fullRotationInfo: new double[] {90, 45, 0},
+//    diffuseComponent: new Vec3(.5, .9, .6),
+//    specularComponent: new Vec3(.5, .1, .4),
+//    alpha: 6,
+//    cornerSmoothing: 4
+//    ));
+
+#endregion
+
+#region Tree test
+//  Hasn't really worked, though i haven't had that long to test it either though
+//shapes.Add(new DistortedSphere(
+//    position: new Vec3(0, 0, 60),
+//    radius: 40,
+
+//    alpha: 6,
+//    diffuseComponent: new Vec3(.2, .55, .31),
+//    specularComponent: new Vec3(0.2, .2, .2)
+
+//    ));
+
+//lightPoints.Add(new PointLight(
+//    position: new Vec3(30, -90, 90),
+//    lightColour: new Vec3(1, 1, 1),
+//    lightBrightness: 100
+//    ));
+
+#endregion
+
+#region Spheres with light scene
+
+////  Sphere 1 - Light
+//lights.Add(new Sphere(
+//    position: new Vec3(3, -3, 15),
+//    radius: 4,
+//    alpha: 6,
+//    lightStrength: 15 * new Vec3(0, 1, 1),
+//    diffuseComponent: null
+//    ));
+
+////  Sphere 2
+//shapes.Add(new Sphere(
+//    position: new Vec3(4, 1, 19),
+//    radius: 4.5,
+//    alpha: 2,
+//    diffuseComponent: new Vec3(0.75, 0.75, .75)
+//    ));
+
+////  Sphere 3 - Light
+//lights.Add(new Sphere(
+//    position: new Vec3(0, 2, 17),
+//    radius: 3.7,
+//    alpha: 10,
+//    lightStrength: 15 * new Vec3(.64, 0, 1),
+//    diffuseComponent: null
+//    ));
+
+////  Sphere 4
+//shapes.Add(new Sphere(
+//    position: new Vec3(-1, -1, 23),
+//    radius: 4.2,
+//    alpha: 4,
+//    diffuseComponent: new Vec3(0.08, 0.66, 0)
+//    ));
+
+////  Sphere 5
+//shapes.Add(new Sphere(
+//    position: new Vec3(-3, -3, 17),
+//    radius: 5.1,
+//    alpha: 6,
+//    diffuseComponent: new Vec3(1, .43, .43)
+//    ));
+
+//// Sphere 6 - Light
+//lights.Add(new Sphere(
+//    position: new Vec3(015, -10, 68.8),
+//    radius: 3.2,
+//    alpha: 6,
+//    lightStrength: 15*new Vec3(1, 0.8, .85),
+//    diffuseComponent: null
+//    ));
+
+
+//// Stalk/Capsule 1
+//Line stalk = new Line(
+//    pointA: new Vec3(0, 0, 0),
+//    pointB: new Vec3(0, 0, 20),
+//    diffuseComponent: new Vec3(.8, .8, .8),
+//    radius: 2.5,
+//    alpha: 5
+
+//    );
+
+////  Floor plane
+//Plane floorPlane = new Plane(
+//    position: new Vec3(0, 0, 0),
+//    normal: new Vec3(0, 0, 1),
+//    diffuseComponent: new Vec3(.7, .7, .7),
+//    alpha: 5
+
+//    );
+
+//shapes.Add(new Combination(
+//    alpha: 5,
+//    shape1: stalk,
+//    shape2: floorPlane,
+//    sdfWeighting: 0.2,
+//    type: comboType.Union
+//    ));
+
+////  Point light source
+//lightPoints.Add(new PointLight(
+//    position: new Vec3(-10, -30, 50),
+//    lightColour: new Vec3(1, 1, 1),
+//    lightBrightness: 1
+//    ));
+
+#endregion
+
+#region Showing off phong model
+
+////  Sphere 1 - Light
+//lights.Add(new Sphere(
+//    position: new Vec3(15, -15, 50),
+//    radius: 15,
+//    alpha: 6,
+//    lightStrength: 15 * new Vec3(1, 1, 1),
+//    diffuseComponent: null
+//    ));
+
+////  Sphere 2
+//shapes.Add(new Sphere(
+//    position: new Vec3(8, 15, 30),
+//    radius: 13,
+//    alpha: 6,
+//    diffuseComponent: new Vec3(.6, 0, .6)
+//    ));
+
+
+////  Floor plane
+//shapes.Add(new Plane(
+//    position: new Vec3(0, 0, 0),
+//    normal: new Vec3(0, 0, 1),
+//    diffuseComponent: new Vec3(0, 0.7, 1),
+//    alpha: 6
+//    //specularComponent: new Vec3(0.3, 0.3, 0.5)
+//    ));
+
+////  Back wall
+//shapes.Add(new Plane(
+//    position: new Vec3(100, 0, 0),
+//    normal: new Vec3(-1, 0, 0),
+//    diffuseComponent: new Vec3(.54, .44, 1),
+//    alpha: 6
+//    //specularComponent: new Vec3(0.05, 0.07, 0.2)
+//    ));
+
+////  Side wall
+//shapes.Add(new Plane(
+//    position: new Vec3(0, 34, 0),
+//    normal: new Vec3(0, -1, 0),
+//    diffuseComponent: new Vec3(.4, .3, 1),
+//    alpha: 6
+//    //specularComponent: new Vec3(0.05, 0.07, 0.2)
+//    ));
+
+
+#endregion
+
+#region Showing individual SDFs
+
+//  Sphere on plane background:
+//  Floor plane
+shapes.Add(new Plane(
+    position: new Vec3(0, 0, 0),
+    normal: new Vec3(0, 0, 1),
+    diffuseComponent: 1 * new Vec3(.4, .54, 0),
+    alpha: 20
+    //specularComponent: new Vec3(0.3, 0.3, 0.5)
+    ));
+
+//  Sphere 2
+//Sphere comboSphere1 = new Sphere(
+//    position: new Vec3(0, 0, 30),
+//    radius: 20,
+//    alpha: 10,
+//    diffuseComponent: new Vec3(.6, 0, .8)
+//    );
+
+//  Sphere 3
+lights.Add(new Line(
+    pointA: new Vec3(-5, 30, 50),
+    pointB: new Vec3(30, 10, 40),
+    alpha: 10,
+    radius: 16,
+    lightStrength: 15 * new Vec3(1, 1, 1),
+    diffuseComponent: null
+    ));
+
+////shapes.Add(comboSphere1);
+////shapes.Add(combo2 );
+////  First Combo
+//shapes.Add(new Combination(
+//    //specularComponent: new Vec3(.9, 0, .9),
+//    //diffuseComponent: new Vec3(.1, 1, .1),
+//    alpha: 20,
+//    shape1: comboSphere1,
+//    shape2: combo2,
+//    sdfWeighting: 0.7,
+//    type: comboType.Union
+//    ));
+
+//  Cuboid
+//shapes.Add(new Cuboid(
+//    position: new Vec3(5, 5, 40),
+//    cornerPosition: new Vec3(8, 20, 6),
+//    fullRotationInfo: new double[] { 0, 20, 55 },
+//    alpha: 100,
+//    diffuseComponent: 1 * new Vec3(.55, 1, .41),
+//    specularComponent: 0 * new Vec3(1, .4, .4),
+//    cornerSmoothing: 8
+//    ));
+
+////  Light points
+//lightPoints.Add(new PointLight(
+//    position: new Vec3(-50, -40, 50),
+//    lightColour: new Vec3(1, 1, 1),
+//    lightBrightness: 2
+//    ));
+#endregion

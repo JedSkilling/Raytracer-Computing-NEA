@@ -1,0 +1,8 @@
+﻿Arrow keys control camera direction, left is left, up looks up
+
+"1" applies changes arrow keys have made
+"2" triggers a save menu
+"3" shows the camera position and rotation
+
+WASD moves in xy plane (Aligned with cam rotation in xy Plane)
+Shift and Space move in z direction

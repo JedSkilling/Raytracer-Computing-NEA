@@ -1,0 +1,3 @@
+Due to the order of multiplication of xyQuat, yzQuat etc
+turning left caused the camera to appear to tilt.
+Swapping the order solved this.

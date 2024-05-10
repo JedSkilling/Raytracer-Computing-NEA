@@ -1,0 +1,22 @@
+Quaternion class info
+
+FUNCTION quaternion.fromAngleAndAxis(angle, axis)
+	quaternion[0] <= cos(angle/2)
+	quaternion[1] <= sin(angle/2) * axis[0]
+	quaternion[2] <= sin(angle/2) * axis[1]
+	quaternion[3] <= sin(angle/2) * axis[2]
+	return quaternion
+	
+	
+FUNCTION *(q1, q2)
+	#	Real component
+	q3[0] <= q1[0] * q2[0] - q1[1] * q2[1] - q1[2] * q2[2] - q1[3] * q2[3]
+	#	i component
+	q3[1] <= q1[0] * q2[1] + q1[1] * q2[0] + q1[2] * q2[3] - q1[3] * q2[2]
+	#	j component
+	q3[2] <= q1[0] * q2[2] - q1[1] * q2[3] + q1[2] * q2[0] + q1[3] * q2[1]
+	#	k component
+	q3[3] <= q1[0] * q2[3] + q1[1] * q2[2] - q1[2] * q2[1] + q1[3] * q2[0]
+	
+	return q3
+

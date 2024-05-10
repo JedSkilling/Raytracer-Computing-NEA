@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RayTracer - Raymarching (Computing NEA)", "RayTracer - Raymarching (Computing NEA).csproj", "{A77B0AE8-9A5E-497B-AD22-F3093B8AB0BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A77B0AE8-9A5E-497B-AD22-F3093B8AB0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77B0AE8-9A5E-497B-AD22-F3093B8AB0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77B0AE8-9A5E-497B-AD22-F3093B8AB0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77B0AE8-9A5E-497B-AD22-F3093B8AB0BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDDB56F4-4D03-46E6-8D77-9710C5395614}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+#######################
+   Don't copy - This is simplest version possible, could be improved a lot (account for BRDF changes though)
+#######################
+
+FUNCTION findingNewRayDirection(normal)
+    theta <= random(0, 2pi) #   Get a random number for the trig functions
+    phi <= random(0, 2pi)   #   2 or 3 dp should be enough
+
+    cosTheta <= cos(theta)
+    sinTheta <= sin(theta)
+
+    cosPhi <= cos(phi)
+    sinPhi <= sin(phi)
+    
+    #   Using this method means our new direction is already normalised
+    newDir <= (cosPhi * cosTheta, cosPhi * sinTheta, sinPhi)
+    IF(dot(newDir, normal) < 0) #   Our new direction must face away from the shape
+        newDir <= - newDir      #   If not we flip our previous direction
+    END IF
+    
+    return newDir
+	
+	##	Implemeted no changes 10.10.23

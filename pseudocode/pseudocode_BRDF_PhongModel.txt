@@ -1,0 +1,28 @@
+#	Required Shape info
+
+vec3 Normal := Normal for the shape at this point
+k_s := specular reflection constant (R, G, B)
+k_d := diffuse reflection constant	(R, G, B)
+alpha := shinininess constant #	High values are more mirror like
+
+FUNCTION BRDF_phong(omega_i, omega_o, Normal)
+    n_omega_i <= normalise(omega_i)	#	prefix n_ means vector is normalised
+    n_omega_o <= normalise(omega_o)
+    n_Normal <= normalise(Normal)
+
+    n_ReflectedRay <= 2 * dot(n_omega_i, n_Normal) * n_Normal - n_omega_i
+
+    #   Reflectance is the sum of the seperate components of specular and diffuse reflection
+
+    #   Max is in place in case the dot product is negative
+    specularComponent <= k_s * max(dot(n_omega_i, n_ReflectedRay), 0)^alpha
+    reflectanceComponent <= k_d * max(dot(n_omega_o, n_Normal), 0)
+
+    #   The dot product term accounts for the shallow angles
+    reflectance <= (specularComponent + reflectanceComponent) * max(dot(Normal, n_omega_i), 0)
+    #   Reflectance is in the form (R, G, B)
+    #   Each component is how much of the colour is reflected
+
+    return reflectance
+	
+	UNCHANGED IN FINAL IMPLEMENTATION (9.10.23)

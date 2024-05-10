@@ -1,0 +1,16 @@
+shape.BRDF(omega_i, omega_o, normal)    #   Returns the BRDF for the parameters with the shapes BRDF info as well
+shape.normal(coordinate)    #   Returns normal of the shape at a point
+
+ray.direction   #   Current ray direction (not updated inside findOutgoingDirection)
+ray.position    #   Current ray point
+
+FUNCTION handleCollision(ray, shape)
+    normal = shape.normal(ray.position) #   Returns the normal
+    
+    omega_i = ray.direction
+    omega_o <= findOutgoingDirection(ray, shape, normal)
+    reflectance <= shape.BRDF(omega_i, omega_o, normal)
+    
+    ray.reflectanceTracking *= reflectance
+    
+    ray.direction = omega_o
